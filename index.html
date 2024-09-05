@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dicionário Online - @programador.cs</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+
+<body>
+
+    <article class="bg__text">
+        <span class="text__background tb-1"></span>
+        <span class="text__background tb-2"></span>
+        <span class="text__background tb-3"></span>
+    </article>
+    <section class="content">
+        <article class="card">
+            <header class="header"></header>
+            <main class="body">
+                <form class="js-form">
+                    <input type="text" name="word" placeholder="Digite a palavra" required autocomplete="off" />
+                    <input type="submit" value="Buscar" />
+                </form>
+                <section class="result js-result display-none">
+                    <div class="loader js-loader display-none"></div>
+                    <h3 class="result__title js-result__title"></h3>
+                    <span class="result__description js-result__description">
+                    </span>
+                </section>
+            </main>
+        </article>
+    </section>
+    <script src="./script/script.js"></script>
+</body>
+
+</html>

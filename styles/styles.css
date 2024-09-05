@@ -1,0 +1,153 @@
+:root {
+  --cor-background: #16357a;
+  --cor-background-card: #204286;
+  --cor-texto: #fefefe;
+  --cor-sombra: rgba(0, 0, 0, 0.2);
+}
+
+* {
+  font-family: "Verdana", sans-serif;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  letter-spacing: 0px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  margin: 0;
+}
+
+.display-none {
+  display: none;
+}
+
+html,
+body {
+  background-color: var(--cor-background);
+  position: relative;
+}
+
+.bg__text {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.text__background::after {
+  content: "";
+  position: absolute;
+  margin: auto;
+  font-size: 15rem;
+  color: var(--cor-texto);
+  font-weight: 900;
+  opacity: 0.02;
+}
+
+.content {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.content .card {
+  background-color: var(--cor-background-card);
+  width: 100%;
+  max-width: 500px;
+  border-radius: 5px;
+  margin: auto;
+  box-shadow: 0 0 10px var(--cor-sombra);
+}
+
+.content .card header.header {
+  background-color: var(--cor-texto);
+  height: 27px;
+  border-radius: 5px 5px 0 0;
+}
+
+.content .card main.body {
+  padding: 3rem 1rem;
+}
+
+.content .card main.body form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.content .card main.body form input[type="text"] {
+  background-color: var(--cor-background-card);
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--cor-texto);
+  color: var(--cor-texto);
+  width: 70%;
+}
+
+.content .card main.body form input[type="text"]::placeholder {
+  color: var(--cor-texto);
+  opacity: 1; /* para firefox */
+  font-family: "Courier New", Courier, monospace;
+}
+
+.content .card main.body form input[type="submit"] {
+  background-color: var(--cor-texto);
+  color: var(--cor-background-card);
+  border: none;
+  padding: 1rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+}
+
+.content .card main.body form input[type="submit"]:hover {
+  box-shadow: 0 0 5px var(--cor-texto);
+}
+
+.content .card main.body .result {
+  padding: 3rem 0.5rem 1rem 0.5rem;
+}
+
+.content .card main.body .result .loader {
+  height: 50px;
+  width: 50px;
+  border: 5px solid var(--cor-texto);
+  margin: 0 auto;
+  border-radius: 50%;
+  border-left-color: var(--cor-background-card);
+  border-right-color: var(--cor-background-card);
+  animation: loader 1s linear infinite;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.content .card main.body .result h3.result__title {
+  color: var(--cor-texto);
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.content .card main.body .result span.result__description {
+  color: var(--cor-texto);
+}
+
+@media screen and (max-width: 550px) {
+  .content .card main.body form {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  .content .card main.body form input[type="text"] {
+    width: 100%;
+  }
+}
