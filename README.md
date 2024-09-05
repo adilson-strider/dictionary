@@ -6,7 +6,7 @@ A simple dictionary.
 
 ## Technology 
 
-HTML5, CSS and Javascript
+HTML5, CSS, Javascript and Open Dictionary API.
 
 ## How to use
 
